@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    padding: 1em;
+    align-items: center;
+    position: relative;
+    background-color: whitesmoke;
+}
+
+ul {
+    position: relative;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.5em;
+    align-items: center;
+}
+
+/*   This seat the navigation element to row direction with only 70% width */
+
+ul>*:hover {
+    color: aqua;
+    transform: scale(1.5);
+
+}
+
+/*  hover effect for the navigation elements with color change and scale change */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+/*  this placed different parts(section) of the page column wise   */
+
+img {
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+}
+
+
+article {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 1em 1em 5em;
+    gap: 10em;
+}
+
+.article_left {
+    font-size: 12px;
+
+}
+
+.article_right {
+    font-size: medium;
+}
+
+section>p {
+    margin-top: 1em;
+}
+
+.gallery_wrap {
+    width: 80%;
+    display: flex;
+    margin: 1em 1em 1em 5em;
+    justify-content: space-between;
+    gap: 10em;
+}
+
+/*  This is  a gallery wrap contains a paragraph from the right side it has  12 companies resposive links with grid form */
+
+.gallery_notice {
+    width: 30%;
+    font-size: 12px;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+a>img {
+    width: 80px;
+    height: 80px;
+    border-style: none;
+    object-fit: contain;
+}
+
+.logos {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 20px;
+    column-gap: 100px;
+    position: relative;
+
+}
+
+
+
+footer {
+    position: relative;
+    background-color: #6736cd;
+
+}
+
+.footercontainer {
+    width: 100%;
+    padding: 2em 1em;
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+.footercontainer * {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-size: 1em;
+    color: aliceblue;
+    margin-left: 2em;
+    text-decoration: none;
+    gap: 0.2em;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Below this the stylesheet style the page for devices only with screen width less than 600px */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+
+    img {
+        padding: 0.5em;
+        width: 100%;
+        height: 15em;
+        object-fit: cover;
+    }
+
+    article {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery_wrap {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    a>img {
+        width: 50px;
+        height: 50px;
+        border-style: none;
+        object-fit: contain;
+    }
+
+    .logos {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 50px);
+        grid-template-rows: repeat(6, auto);
+        grid-gap: 10px;
+        column-gap: 50px;
+        position: relative;
+    }
+
+    .footercontainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+/*  over all this  media query styles the flex row direction to column direction which make the page components visible on a smaller devices*/
