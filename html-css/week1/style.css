@@ -27,18 +27,18 @@ img {
 }
 .important {
   width: 60%;
-  float: left;
+  display: flex;
   
 }
 .address {
   margin-top: 10px;
   width: 35%;
 }
-.summary, .experience, .education {
+summary, experience, education {
     padding:10px;
     background-color: silver;
     font-style: italic;
-    margin-bottom: 15px,
+    margin-bottom: 15px;
 }
 
 h3, h2 {
@@ -64,7 +64,7 @@ h3:hover {
     transform: scale(0.9);
   }
 
- .footer {
+ footer {
     padding: 10px;
     margin-top: 5px;
     background-color: silver;
@@ -76,7 +76,6 @@ h3:hover {
         font-size: 15px;
     }
     main {
-      display:flex;
       flex-direction: column-reverse;
     }
 }  
