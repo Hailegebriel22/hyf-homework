@@ -1,81 +1,106 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   background-color: aqua;
   width: 100%;
   box-sizing: border-box;
   font-size: 20px;
-  }
-
-main { 
-    background-color: aqua;
-    display: flex;
-    justify-content: space-between;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+main {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+}
+
 img {
   width: 60%;
   margin: 10px 20px 10px 60px;
 }
+
 .profile :first-child {
   text-align: center;
 }
-  .title {  
-    padding: 10px;
-    text-align: center;
+
+.title {
+  padding: 10px;
+  text-align: center;
 }
+
 .important {
   width: 60%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+
 }
+
 .address {
   margin-top: 10px;
   width: 35%;
 }
-summary, experience, education {
-    padding:10px;
-    background-color: silver;
-    font-style: italic;
-    margin-bottom: 15px;
+
+.summary,
+.experience,
+.education {
+  padding: 10px;
+  background-color: silver;
+  font-style: Tahoma;
+  margin-bottom: 15px;
 }
 
-h3, h2 {
+h3,
+h2 {
   background-color: aqua;
 }
 
 
-  ul {
-        background: silver;
-        padding: 5px;
-    list-style-type:square;
-    padding: 25px;
+ul {
+  background: silver;
+  padding: 5px;
+  list-style-type: square;
+  padding: 25px;
 }
 
 li {
-    padding: 10px;
-    font-style: italic;
+  padding: 10px;
+  font-style: italic;
 }
 
 
 h3:hover {
-    color: orange;
-    transform: scale(0.9);
+  color: orange;
+  transform: scale(0.9);
+}
+
+footer {
+  padding: 10px;
+  margin-top: 5px;
+  background-color: silver;
+  border-top: 0.2px solid;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
   }
 
- footer {
-    padding: 10px;
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .important {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .address {
     margin-top: 5px;
-    background-color: silver;
-    border-top: 0.2px  solid;
-   text-align: center;
+    width: 35%;
+  }
 }
-@media only screen and (max-width: 600px){
-    body{
-        font-size: 15px;
-    }
-    main {
-      flex-direction: column-reverse;
-    }
-}  
