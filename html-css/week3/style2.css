@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 2vh 2vw;
+    border: 2px solid lightgray;
+    font-size: 3vh;
+    background-color: antiquewhite;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 3vh;
+    background-color: darkcyan;
+}
+
+.logo {
+    width: 15vw;
+    height: 15vh;
+    object-fit: contain;
+}
+
+
+ul {
+    display: flex;
+    gap: 4vw;
+    margin-right: 2vw;
+    list-style: none;
+
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+main {
+    margin: 2%;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    margin-left: 20px;
+
+}
+
+progress {
+    width: 80%;
+    height: 15vh;
+
+}
+
+.progress2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+input,
+select {
+    width: 20%;
+    height: 5vh;
+}
+
+div {
+    width: 100%;
+    display: block;
+    margin: 3vh;
+}
+
+label {
+    padding: 1vh 4vw;
+    width: 15vw;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+.email {
+    margin-left: 3vw;
+}
+
+
+
+.password {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio {
+    display: flex;
+
+}
+
+#weeklynews,
+#monthlynews,
+#reject {
+    width: 2vw;
+}
+
+.button {
+    margin-top: 10%;
+}
+
+.button a {
+    padding: 3vh 4vw;
+    background-color: green;
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 80%;
+}
+
+/* For smaller screen devices (less than 600px screen ) */
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+
+    }
+
+    ul {
+        flex-direction: column;
+
+    }
+
+    .logo {
+        width: 10vw;
+        height: 20vh;
+        object-fit: contain;
+    }
+
+    .radio {
+        flex-direction: column;
+    }
+
+    .button a {
+        padding: 1vh 1vw;
+        margin-left: auto;
+    }
+
+}

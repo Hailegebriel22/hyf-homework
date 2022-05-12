@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <title>form1</title>
+</head>
+
+<body>
+    <header>
+        <!-- header with logo and navgigation links -->
+        <img class="logo" alt="tailor icon"
+            src="https://image.shutterstock.com/image-vector/green-outline-scissor-isolated-on-260nw-1905313510.jpg">
+        <nav>
+            <ul>
+                <li> <a target="_blank"
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week2/index1.html">
+                        Home </a></li>
+                <li> <a target="_blank"
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week2/index1.html">About</a>
+                </li>
+                <li> <a target="_blank"
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week2/index1.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- The main section include a text section , a form, and a button link  -->
+        <section class="introduction">
+            <h1> Sign up to yourcustomtailor.com</h1>
+            <p>
+                We can't wait to help you improve your life-style and again the attention from people around you!
+
+            </p>
+            <p>
+                Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking
+                the best offers that match your preferences and style. Every week we will send you a hand-picked
+                selection.
+                We just need to know a few details about your first...
+            </p>
+            <h2> Step 1/4 - tell us who you are?</h2>
+        </section>
+        <form method="get" action="result.html">
+            <!-- form section, Here we  will get(collect)  diffrent kinds personal datas of  users-->
+            <div class="progress1">
+                <h5> Progress</h5>
+                <progress id="progress1" max="100" value="25"> </progress>
+                <p> Nice to meet you. Let's spend a minute to get to know each other? please enter the following: </p>
+            </div>
+            <div class="name">
+                <!-- Users  personal information with input value validation -->
+                <label for="firstname"> First name* </label>
+                <input type="text" name="name" id="firstname" required="true" />
+                <label for="lastname">Last name*</label>
+                <input type="text" name="lastname" id="lastname" required="true" />
+            </div>
+            <div class="country">
+                <label for="contry">Country*</label>
+                <select id="country" name="country" required="true">
+                    <option> Select your country </option>
+                    <option> Austria</option>
+                    <option> Bangladesh</option>
+                    <option> Canada</option>
+                    <option> Denmark</option>
+                    <option> Ethiopia</option>
+                </select>
+            </div>
+            <div class="address">
+                <!-- If a billing address is different than shipping address -->
+                <label for="address">Street address*</label>
+                <input type="text" name="address" id="address" required="true" />
+                <label for="postcode">Post code* </label>
+                <input type="text" name="postcode" id="postcode" pattern="\d*" maxlength="4" required="true" />
+            </div>
+            <div class="profile">
+
+                <label for="profile">Profile description <br>
+                    <em>please provide a short description of yourself to be displayed on our social
+                        community pages.
+                    </em>
+                </label>
+
+                <textarea id="profile" name="profile" rows="5" cols="70" maxlength="500" spellcheck="true"></textarea>
+            </div>
+            <div>
+                <p> Use the same address for billing and shipping? Uncheck below to fill out a separate shipping
+                    address.
+                </p>
+            </div>
+
+            <div class="shipping">
+                <label for="shipping"> Shipping address</label>
+                <input type="checkbox" name="shipping" id="shipping" checked />
+                <div class="different-address">
+                    <h5> Different Shipping Address</h5>
+                    <!-- If a billing address is different than shipping address -->
+                    <label for="contry">Country*</label>
+                    <select id="country" name="country" required="true">
+                        <option> Select your country </option>
+                        <option> Austria</option>
+                        <option> Bangladesh</option>
+                        <option> Canada</option>
+                        <option> Denmark</option>
+                        <option> Ethiopia</option>
+                    </select>
+                    <label for="street-address2"> Street Adress*</label>
+                    <input type="text" name="street-address2" id="street-address2" />
+                    <label for="postcode2">Post code* </label>
+                    <input type="number" name="postcode2" id="postcode2" pattern="[+]?[0-9] " maxlength="4"
+                        required="true" />
+
+                </div>
+            </div>
+
+
+        </form>
+
+        <div class="button">
+            <a target="_blank"
+                href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week2/index2.html">
+                Next Step
+            </a>
+        </div>
+    </main>
+
+</body>
+
+</html>

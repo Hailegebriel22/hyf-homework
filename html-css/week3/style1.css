@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 2vh 2vw;
+    border: 2px solid lightgray;
+    font-size: 3vh;
+    background-color: antiquewhite;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 3vh;
+    background-color: darkcyan;
+}
+
+.logo {
+    width: 15vw;
+    height: 15vh;
+    object-fit: contain;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 4vw;
+    margin-right: 2vw;
+
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+main {
+    margin: 2%;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    margin-left: 20px;
+
+}
+
+progress {
+    width: 80%;
+    height: 15vh;
+
+}
+
+.progress1 {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    width: 20%;
+    height: 5vh;
+}
+
+div {
+    width: 100%;
+    display: block;
+    margin: 3vh;
+}
+
+label {
+    padding: 1vh 4vw;
+    width: 15vw;
+    display: inline-block;
+    text-align: right;
+}
+
+em {
+    font-size: 12px;
+}
+
+
+.profile {
+    display: flex;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+
+.different-address>label {
+    display: flex;
+}
+
+/* Hidding inputs elements , if the shipping and billing address are the same.  */
+
+#shipping:checked~.different-address {
+    visibility: collapse;
+}
+
+.button a {
+    padding: 3vh 4vw;
+    background-color: green;
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 80%;
+    margin-bottom: 2%;
+}
+
+/* For smaller screen devices (less than 600px screen width) */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+
+    }
+
+    ul {
+        flex-direction: column;
+
+    }
+
+    .logo {
+        width: 10vw;
+        height: 20vh;
+        object-fit: contain;
+    }
+
+    .button a {
+        padding: 1vh 1vw;
+        margin-left: auto;
+    }
+
+}
