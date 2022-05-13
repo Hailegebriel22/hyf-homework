@@ -4,6 +4,12 @@
 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
 header {
     padding: 1em;
     align-items: center;
@@ -11,6 +17,7 @@ header {
     background-color: whitesmoke;
 }
 
+/*   This seat the navigation element to row direction with only 70% width */
 ul {
     position: relative;
     width: 70%;
@@ -21,7 +28,11 @@ ul {
     align-items: center;
 }
 
-/*   This seat the navigation element to row direction with only 70% width */
+li a {
+    text-decoration: none;
+}
+
+/*  hover effect for the navigation elements with color change and scale change */
 
 ul>*:hover {
     color: aqua;
@@ -29,13 +40,9 @@ ul>*:hover {
 
 }
 
-/*  hover effect for the navigation elements with color change and scale change */
 
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-}
+
+
 
 /*  this placed different parts(section) of the page column wise   */
 
@@ -152,6 +159,7 @@ footer {
     ul {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 0.2em;
     }
 
