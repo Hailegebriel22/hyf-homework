@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style1.css" />
-    <title>form1</title>
+    <title>Step 1 - Sign up page</title>
 </head>
 
 <body>
@@ -54,10 +54,10 @@
             </div>
             <div class="name">
                 <!-- Users  personal information with input value validation -->
-                <label for="firstname"> First name* </label>
-                <input type="text" name="name" id="firstname" required="true" />
-                <label for="lastname">Last name*</label>
-                <input type="text" name="lastname" id="lastname" required="true" />
+                <label for="firstname"> First name &#42 </label>
+                <input type="text" name="name" id="firstname" required />
+                <label for="lastname">Last name &#42</label>
+                <input type="text" name="lastname" id="lastname" required />
             </div>
             <div class="country">
                 <label for="contry">Country*</label>
@@ -72,10 +72,10 @@
             </div>
             <div class="address">
                 <!-- If a shipping address is different than billing address -->
-                <label for="address">Street address*</label>
-                <input type="text" name="address" id="address" required="true" />
-                <label for="postcode">Post code* </label>
-                <input type="text" name="postcode" id="postcode" pattern="\d*" maxlength="4" required="true" />
+                <label for="address">Street address &#42</label>
+                <input type="text" name="address" id="address" required />
+                <label for="postcode">Post code &#42 </label>
+                <input type="text" name="postcode" id="postcode" pattern="\d*" maxlength="4" minlength="4" required />
             </div>
             <div class="profile">
 
@@ -99,20 +99,20 @@
                 <div class="different-address">
                     <h5> Different Shipping Address</h5>
                     <!-- If a billing address is different than shipping address -->
-                    <label for="contry">Country*</label>
-                    <select id="country" name="country" required="true">
-                        <option> Select your country </option>
-                        <option> Austria</option>
-                        <option> Bangladesh</option>
-                        <option> Canada</option>
-                        <option> Denmark</option>
-                        <option> Ethiopia</option>
+                    <label for="country">Country &#42</label>
+                    <select id="country" name="country" required>
+                        <option value="select"> Select your country </option>
+                        <option value="Austria"> Austria</option>
+                        <option value="Bangladesh"> Bangladesh</option>
+                        <option value="Canada"> Canada</option>
+                        <option value="Denmark"> Denmark</option>
+                        <option value="Ethiopia"> Ethiopia</option>
                     </select>
-                    <label for="street-address2"> Street Adress*</label>
+                    <label for="street-address2"> Street Adress &#42</label>
                     <input type="text" name="street-address2" id="street-address2" />
                     <label for="postcode2">Post code* </label>
-                    <input type="number" name="postcode2" id="postcode2" pattern="[+]?[0-9] " maxlength="4"
-                        required="true" />
+                    <input type="text" name="postcode2" id="postcode2" pattern="[+]?[0-9] " maxlength="4" minlength="4"
+                        required />
 
                 </div>
             </div>
