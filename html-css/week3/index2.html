@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style2.css" />
-    <title>form2</title>
+    <title>Step 2 - Sign up page</title>
 </head>
 
 <body>
@@ -16,14 +16,16 @@
 
         <nav>
             <ul>
-                <li> <a target="_blank"
-                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">
-                        Home</a></li>
-                <li> <a target="_blank"
-                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">About</a>
+                <li> <a
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index2.html">
+                        Home
+                    </a>
                 </li>
-                <li> <a target="_blank"
-                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">Contact</a>
+                <li> <a
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index2.html">About</a>
+                </li>
+                <li> <a
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index2.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -33,7 +35,7 @@
             <h1> Sign up to yourcustomtailor.com</h1>
             <h2> Step 2/4 - How can we reach you?</h2>
         </section>
-        <form action="get" action="result.html">
+        <form action="result.html">
             <div class="progress2">
                 <h5> Progress</h5>
                 <progress id="progress2" max="100" value="50"> </progress>
@@ -50,12 +52,12 @@
             <div class="password">
                 <div class="firstpassword">
                     <label for="password">Password*</label>
-                    <input type="password" id="password" name="password"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" />
+                    <input type="password" id="password" name="password" minlength="10"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"  />
                 </div>
                 <div class="re-enterpassword">
                     <label for="re-enterpassword">Re-enter Password*</label>
-                    <input type="password" id="re-enterpassword" name="re-enterpassword"
+                    <input type="password" id="re-enterpassword" name="re-enterpassword" minlength="10"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" />
                 </div>
             </div>
@@ -78,15 +80,11 @@
                 <input type="radio" name="newsletter" id="reject" value="don't send" />
 
             </div>
+            <input class="button" type="submit" value="Next Step" />
 
         </form>
-        <div class="button">
-            <a target="_blank"
-                href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index3.html">
-                Next Step
-            </a>
-        </div>
+
     </main>
 
 </body>
-<html>
+</html>

@@ -16,18 +16,15 @@
             src="https://image.shutterstock.com/image-vector/green-outline-scissor-isolated-on-260nw-1905313510.jpg">
         <nav>
             <ul>
-                <li>
-                    <a href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">Home 
-                    </a>
-                </li>    
-                        
-                <li> 
-                    <a href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">About
-                    </a>
+                <li> <a
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">
+                        Home </a>
                 </li>
-                <li> 
-                    <a href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">Contact
-                    </a>
+                <li> <a
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">About</a>
+                </li>
+                <li> <a
+                        href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index1.html">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -55,16 +52,16 @@
                 <progress id="progress1" max="100" value="25"> </progress>
                 <p> Nice to meet you. Let's spend a minute to get to know each other? please enter the following: </p>
             </div>
-            <div>
+            <div class="name">
                 <!-- Users  personal information with input value validation -->
-                <label for="firstname"> First name* </label>
+                <label for="firstname"> First name &#42 </label>
                 <input type="text" name="name" id="firstname" required />
-                <label for="lastname">Last name*</label>
+                <label for="lastname">Last name &#42</label>
                 <input type="text" name="lastname" id="lastname" required />
             </div>
             <div class="country">
-                <label for="country">Country*</label>
-                <select id="country" name="country" required />
+                <label for="contry">Country*</label>
+                <select id="country" name="country" required="true">
                     <option> Select your country </option>
                     <option> Austria</option>
                     <option> Bangladesh</option>
@@ -74,11 +71,11 @@
                 </select>
             </div>
             <div class="address">
-                <!-- If a billing address is different than shipping address -->
-                <label for="address">Street address*</label>
-                <input type="text" name="address" id="address"   />
-                <label for="postcode">Post code* </label>
-                <input type="text" name="postcode" id="postcode" pattern="\d*" maxlength="4" required />
+                <!-- If a shipping address is different than billing address -->
+                <label for="address">Street address &#42</label>
+                <input type="text" name="address" id="address" required />
+                <label for="postcode">Post code &#42 </label>
+                <input type="text" name="postcode" id="postcode" pattern="\d*" maxlength="4" minlength="4" required />
             </div>
             <div class="profile">
 
@@ -102,32 +99,28 @@
                 <div class="different-address">
                     <h5> Different Shipping Address</h5>
                     <!-- If a billing address is different than shipping address -->
-                    <label for="contry">Country*</label>
+                    <label for="country">Country &#42</label>
                     <select id="country" name="country" required>
                         <option value="select"> Select your country </option>
                         <option value="Austria"> Austria</option>
-                        <option value= "Bangladesh"> Bangladesh</option>
-                        <option value= "Canada"> Canada</option>
-                        <option value= "Denmark" > Denmark</option>
-                        <option value= "Ethiopia"> Ethiopia</option>
+                        <option value="Bangladesh"> Bangladesh</option>
+                        <option value="Canada"> Canada</option>
+                        <option value="Denmark"> Denmark</option>
+                        <option value="Ethiopia"> Ethiopia</option>
                     </select>
-                    <label for="street-address2"> Street Adress*</label>
+                    <label for="street-address2"> Street Adress &#42</label>
                     <input type="text" name="street-address2" id="street-address2" />
                     <label for="postcode2">Post code* </label>
-                    <input type="number" name="postcode2" id="postcode2" pattern="[+]?[0-9] " maxlength="4" minlength="4" required />
-                        
+                    <input type="text" name="postcode2" id="postcode2" pattern="[+]?[0-9] " maxlength="4" minlength="4"
+                        required />
 
                 </div>
             </div>
-
+            <input class="button" type="submit" value="Next Step" />
 
         </form>
 
-        <div class="button">
-            <a  href="https://htmlpreview.github.io/?https://github.com/Hailegebriel22/hyf-homework/blob/master/html-css/week3/index2.html">
-                Next Step
-            </a>
-        </div>
+
     </main>
 
 </body>

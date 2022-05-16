@@ -100,17 +100,17 @@ progress {
     margin: 5vw;
 }
 
-.button {
-    margin-top: 10%;
-}
 
-.button a {
-    padding: 3vh 4vw;
+.button {
+    padding: 5vh 4vw;
     background-color: green;
     color: aliceblue;
-    text-decoration: none;
     margin-left: 80%;
+    margin-bottom: 1%;
+    font-size: 3vh;
+    line-height: 0%;
 }
+
 
 /* For smaller screen devices (less than 600px screen width) */
 @media screen and (max-width: 600px) {
@@ -146,8 +146,8 @@ progress {
         object-fit: contain;
     }
 
-    .button a {
-        padding: 1vh 1vw;
+    .button {
+        padding: 2vh 2vw;
         margin-left: auto;
     }
 
