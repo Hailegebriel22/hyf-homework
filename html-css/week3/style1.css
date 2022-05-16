@@ -82,6 +82,11 @@ label {
     text-align: right;
 }
 
+textarea {
+    width: 67%;
+
+}
+
 em {
     font-size: 12px;
 }
@@ -89,12 +94,6 @@ em {
 
 .profile {
     display: flex;
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
 }
 
 
@@ -108,23 +107,19 @@ em {
     visibility: collapse;
 }
 
-.button a {
-    padding: 3vh 4vw;
+.button {
+    padding: 5vh 4vw;
     background-color: green;
     color: aliceblue;
-    text-decoration: none;
     margin-left: 80%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+    font-size: 3vh;
+    line-height: 0%;
 }
 
 /* For smaller screen devices (less than 600px screen width) */
 @media screen and (max-width: 600px) {
     header {
-        flex-direction: column;
-
-    }
-
-    ul {
         flex-direction: column;
 
     }
@@ -135,7 +130,30 @@ em {
         object-fit: contain;
     }
 
-    .button a {
+    ul {
+        flex-direction: column;
+
+    }
+
+    input,
+    select,
+    label {
+        width: 50%;
+        height: 5vh;
+        display: block;
+        text-align: center;
+    }
+
+    .profile {
+        position: relative;
+        flex-direction: column;
+    }
+
+    textarea {
+        margin-block-start: 15%;
+    }
+
+    .button {
         padding: 1vh 1vw;
         margin-left: auto;
     }
