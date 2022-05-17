@@ -60,14 +60,14 @@
                 <input type="text" name="lastname" id="lastname" required />
             </div>
             <div class="country">
-                <label for="contry">Country*</label>
-                <select id="country" name="country" required="true">
+                <label for="country">Country*</label>
+                <select id="country" name="country" required >
                     <option> Select your country </option>
-                    <option> Austria</option>
-                    <option> Bangladesh</option>
-                    <option> Canada</option>
-                    <option> Denmark</option>
-                    <option> Ethiopia</option>
+                    <option value="Austria"> Austria</option>
+                    <option value="Bangladesh"> Bangladesh</option>
+                    <option value="Canada"> Canada</option>
+                    <option value="Denmark"> Denmark</option>
+                    <option value="Ethiopia"> Ethiopia</option>
                 </select>
             </div>
             <div class="address">
@@ -99,9 +99,9 @@
                 <div class="different-address">
                     <h5> Different Shipping Address</h5>
                     <!-- If a billing address is different than shipping address -->
-                    <label for="country">Country &#42</label>
-                    <select id="country" name="country" required>
-                        <option value="select"> Select your country </option>
+                    <label for="country2">Country &#42</label>
+                    <select id="country2" name="country2" required>
+                        <option> Select your country </option>
                         <option value="Austria"> Austria</option>
                         <option value="Bangladesh"> Bangladesh</option>
                         <option value="Canada"> Canada</option>
