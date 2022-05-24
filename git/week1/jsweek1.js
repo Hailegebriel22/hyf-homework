@@ -2,24 +2,24 @@
 
 //  Age-ify (A future age calculator)
 
-var yearOfBirth = 1987;
+const yearOfBirth = 1987;
 var yearFuture = 2030;
 var age = yearFuture - yearOfBirth;
-console.log('You will be ' + age + ' years old in ' + yearFuture);
+console.log(`You will be ${age}  years old in ${yearFuture}`);
 
 // Goodboy-Oldboy (A dog age calculator)
 
-var dogYearOfBirth = 2020
+const dogYearOfBirth = 2020;
 var dogYearFuture = 2030;
 var yearDifference = dogYearFuture - dogYearOfBirth;
 var dogYear = 7 * (yearDifference);
 let shouldShowResultInDogYears = 'false';
 
-if (shouldShowResultInDogYears == 'true') {
-    console.log('Your dog will be ' + dogYear + ' dog years in ' + dogYearFuture)
+if (shouldShowResultInDogYears) {
+    console.log(`Your dog will be  ${dogYear}  dog years in ${dogYearFuture}`)
 }
 else {
-    console.log('Your dog will be ' + yearDifference + ' Human years in ' + dogYearFuture)
+    console.log(`Your dog will be ${yearDifference} Human years in  ${dogYearFuture}`)
 }
 
 // Housey pricey (A house price estimator)
@@ -36,13 +36,13 @@ function housePriceForPeter() {
 }
 var houseExpectedPriceForPeter = housePriceForPeter();
 if (houseExpectedPriceForPeter < houseCostPeter) {
-    console.log(' Peter is paying ' + Math.abs(houseCostPeter - houseExpectedPriceForPeter) + ' extra.')
+    console.log(`Peter is paying ${ Math.abs(houseCostPeter - houseExpectedPriceForPeter)}  extra.`)
 }
-else if (houseExpectedPriceForPeter == houseCostPeter) {
+else if (houseExpectedPriceForPeter === houseCostPeter) {
     console.log(' Peter is paying  expected amount.')
 }
 else {
-    console.log(' Peter is paying ' + Math.abs(houseExpectedPriceForPeter - houseCostPeter) + ' less.')
+    console.log(` Peter is paying ${ Math.abs(houseExpectedPriceForPeter - houseCostPeter)} less.`)
 }
 
 // evaluation for Julia
@@ -58,13 +58,13 @@ function housePriceForJulia() {
 }
 var houseExpectedPriceForJulia = housePriceForJulia();
 if (houseExpectedPriceForJulia < houseCostJulia) {
-    console.log(' Julia is paying ' + Math.abs(houseCostJulia - houseExpectedPriceForJulia) + ' extra.')
+    console.log(' Julia is paying ' + Math.abs(houseCostJulia - houseExpectedPriceForJulia) + ' extra.');
 }
 else if (houseExpectedPriceForJulia == houseCostJulia) {
-    console.log(' Julia is paying  expected amount.')
+    console.log(' Julia is paying  expected amount.');
 }
 else {
-    console.log(' Julia is paying ' + Math.abs(houseExpectedPriceForJulia - houseCostJulia) + ' less.')
+    console.log(' Julia is paying ' + Math.abs(houseExpectedPriceForJulia - houseCostJulia) + ' less.');
 }
 
 
@@ -73,14 +73,14 @@ else {
 
 // Ez Namey (Startup name generator)
 
-let firstWords = ['Unique', 'Green', 'Sunny', 'Reliable', 'Trust', 'Simple', 'Speedy', 'vision', 'Sky', 'Future']
-let secondWords = ['Systems', 'Apps', 'Company', 'Partners', 'Business', 'Associates', 'Technology', 'Consultant', 'Digital', 'Corporates']
+const firstWords = ['Unique', 'Green', 'Sunny', 'Reliable', 'Trust', 'Simple', 'Speedy', 'vision', 'Sky', 'Future'];
+const secondWords = ['Systems', 'Apps', 'Company', 'Partners', 'Business', 'Associates', 'Technology', 'Consultant', 'Digital', 'Corporates'];
 
 /* generate one random numbers for each of the name arrays, to give flexibility.
 One can choose any name from firstWords and match it with any name to secondWords.  */
 
 const randomNumber1 = Math.floor(Math.random() * 10);
 const randomNumber2 = Math.floor(Math.random() * 10);
-let startupName = firstWords[randomNumber1] + ' ' + secondWords[randomNumber2]
+const startupName = firstWords[randomNumber1] + ' ' + secondWords[randomNumber2];
 
-console.log('The startup: ' + startupName + ' contains ' + startupName.length + ' characters')
+console.log(`The startup: ${startupName} contains  ${startupName.length} characters`);
