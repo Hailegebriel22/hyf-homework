@@ -3,16 +3,16 @@
 //  Age-ify (A future age calculator)
 
 const yearOfBirth = 1987;
-var yearFuture = 2030;
-var age = yearFuture - yearOfBirth;
+const yearFuture = 2030;
+let  age = yearFuture - yearOfBirth;
 console.log(`You will be ${age} years old in ${yearFuture}.` );
 
 // Goodboy-Oldboy (A dog age calculator)
 
 const dogYearOfBirth = 2020
-var dogYearFuture = 2030;
-var yearDifference = dogYearFuture - dogYearOfBirth;
-var dogYear = 7 * (yearDifference);
+const dogYearFuture = 2030;
+let yearDifference = dogYearFuture - dogYearOfBirth;
+let dogYear = 7 * (yearDifference);
 let shouldShowResultInDogYears = 'false';
 
 if (shouldShowResultInDogYears) {
