@@ -11,8 +11,8 @@ const names = [
     "Tala",
 ];
 const nameToRemove = "Ahmad";
-const indexNameToRemove = names.indexOf("Ahmad");
-names.splice(indexNameToRemove, 1);
+const indexToRemove = names.indexOf("Ahmad");
+names.splice(indexToRemove, 1);
 
 console.log(names); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala'] */
 
@@ -24,14 +24,15 @@ const travelInformation = {
 };
 
 function timeToDestination(speed, destinationDistance) {
-    arrivingTime = destinationDistance / speed;
-    diff = arrivingTime - Math.floor(arrivingTime);
-    if (diff == 0) {
+    let arrivingTime = destinationDistance / speed;
+    const hours = Math.floor(arrivingTime);
+    let minutes = arrivingTime - hours;
+    if (minutes == 0) {
         return console.log(`You will arrive in ${arrivingTime} hours`);
     }
 
     else
-        return console.log(`You will arrive in ${Math.floor(arrivingTime)} hours and ${Math.round(diff * 60)} minutes`);
+        return console.log(`You will arrive in ${hours} hours and ${Math.round(minutes * 60)} minutes`);
 }
 
 
@@ -60,7 +61,7 @@ const seriesDurations = [
         minutes: 0,
     },
 ];
-expectedAge = 80 * 365;
+const expectedAge = 80 * 365;
 function percentageOfAge(array) {
     let sum = 0;
     for (i = 0; i < array.length; i++) {
@@ -68,13 +69,13 @@ function percentageOfAge(array) {
         const percentage = [];
         totalDayFormat[i] = (array[i].days + (array[i].hours / (24)) + (array[i].minutes / (24 * 60)));
         percentage[i] = (totalDayFormat[i] / expectedAge) * 100;
-        result = console.log(`${array[i].title} took ${percentage[i].toFixed(3)}% of my life.`);
+        console.log(`${array[i].title} took ${percentage[i].toFixed(3)}% of my life.`);
         sum += totalDayFormat[i];
         totalPercentage = (sum / expectedAge) * 100;
 
     }
     console.log(`In total that is ${totalPercentage.toFixed(3)} of my life`);
-    return result;
+
 }
 percentageOfAge(seriesDurations)
 
@@ -90,7 +91,7 @@ saveNote("water the plants", 3);
 
 
 function getNote(id) {
-    if (typeof id !== 'number' || typeof id === null || id > notes.length) {
+    if (typeof id !== 'number' || typeof id === null || id > notes.length || id < 0) {
         return console.log(`It is an error string`);
     }
 
@@ -112,9 +113,9 @@ getNote(3)
 function logOutNotesFormatted() {
     for (let i = 0; i < notes.length; i++) {
 
-        noteFormat = console.log(`The note with id: ${notes[i].id}, has the following note text: ${notes[i].content}.`)
+        console.log(`The note with id: ${notes[i].id}, has the following note text: ${notes[i].content}.`)
     }
-    return noteFormat;
+
 }
 logOutNotesFormatted()
 
@@ -141,15 +142,15 @@ function showStatus(activities) {
         activitySum += activities[i].duration;
     }
     if (activities.length == 0) {
-        return console.log(`Add some activities before calling showStatus.`);
+        console.log(`Add some activities before calling showStatus.`);
     }
 
     else if (activitySum <= 120) {
 
-        return console.log(`You have added ${activities.length} activities. They amount to ${activitySum} min. of usage`)
+        console.log(`You have added ${activities.length} activities. They amount to ${activitySum} min. of usage`)
     }
     else
-        return console.log(`You have reached your limit, no more smartphoning for you!`)
+        console.log(`You have reached your limit, no more smartphoning for you!`)
 
 }
 showStatus(activities)
@@ -160,7 +161,7 @@ showStatus(activities)
 
 const options = { weekday: 'narrow', year: '2-digit', month: '2-digit', day: 'numeric' };
 let today = new Date();
-date = today.toLocaleDateString(undefined, options);
+let date = today.toLocaleDateString(undefined, options);
 function addActivity(date, activity, duration) {
     if (typeof date == 'string' && typeof activity == 'string' && typeof duration == 'number')
         return activities.push({ date, activity, duration })
@@ -174,6 +175,7 @@ addActivity(date, "Twitter", 60);
 
 function activitySpentMore(activities) {
     let mostSpend = activities[0].duration;
+    let mostSpendActivity = activities[0].activity;
     for (let i = 1; i < activities.length; i++) {
         if (mostSpend < activities[i].duration) {
             mostSpend = activities[i].duration;
@@ -183,7 +185,7 @@ function activitySpentMore(activities) {
     }
 
 
-    return console.log(`You spend ${mostSpend} min on ${mostSpendActivity} `)
+     console.log(`You spend ${mostSpend} min on ${mostSpendActivity} `)
 
 }
 activitySpentMore(activities) 
