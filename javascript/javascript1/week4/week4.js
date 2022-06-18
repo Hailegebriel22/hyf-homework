@@ -1,6 +1,8 @@
 const userName = "";
 const todoList = [];
 
+// addTodo function to add todos on todoList.
+
 function addTodo(command) {
 
     if (command.includes("Add") && command.includes("to my todo")) {
@@ -14,6 +16,8 @@ function addTodo(command) {
     }
 }
 
+// removeTodos  function to remove todos from todoList
+
 function removeTodos(command) {
     if (command.includes("Remove") && command.includes("from my todo")) {
         let removeTodo = command.substring(7, command.lastIndexOf("from my todo") - 1);
@@ -25,6 +29,30 @@ function removeTodos(command) {
         return "Please use proper command!"
     }
 
+}
+
+// doMath function  for calculating simple math
+
+function doMath(command) {
+    if (command.includes("what is") && command.includes("+")) {
+        const numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
+        return Math.floor(numb[0]) + Math.floor(numb[2]);
+    }
+    else if (command.includes("what is") && command.includes("*")) {
+        const numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
+        return Math.floor(numb[0]) * Math.floor(numb[2]);
+    }
+    else if (command.includes("what is") && command.includes("/")) {
+        const numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
+        return Math.floor(numb[0]) / Math.floor(numb[2]);
+    }
+    else if (command.includes("what is") && command.includes("-")) {
+        const numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
+        return Math.floor(numb[0]) - Math.floor(numb[2]);
+    }
+    else {
+        return "Please use proper command!"
+    }
 }
 
 
@@ -60,29 +88,15 @@ function getReply(command) {
 
     }
     else if (command === "What day is it today?") {
-        let today = new Date();
+        const today = new Date();
         return `${today.getDate()} of ${today.toLocaleString('default', { month: 'long' })} ${today.getFullYear()}.`;
     }
-    else if (command.includes("what is") && command.includes("+")) {
-        let numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
-        console.log(numb)
-        return `${Math.floor(numb[0]) + Math.floor(numb[2])}`;
-    }
-    else if (command.includes("what is") && command.includes("*")) {
-        let numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
-        return Math.floor(numb[0]) * Math.floor(numb[2]);
-    }
-    else if (command.includes("what is") && command.includes("/")) {
-        let numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
-        return Math.floor(numb[0]) / Math.floor(numb[2]);
-    }
-    else if (command.includes("what is") && command.includes("-")) {
-        let numb = command.match(/(?<=^|[-+*/])\-\d+|\d+|[-+*/]/g);
-        return `${Math.floor(numb[0]) - Math.floor([2])}`;
+    else if (command.includes("what is") && (command.includes("+") || command.includes("-") || command.includes("*") || command.includes("/"))) {
+        return doMath(command);
     }
     else if (command === "Set a timer for 4 minutes") {
         setTimeout(console.log, 4 * 60 * 1000, "Timer done");
-        return `Timer set for 4 minutes.`
+        return "Timer set for 4 minutes."
     }
     // command for currency.
     else if (command.includes("How many") && /\d/.test(command)) {
@@ -97,11 +111,11 @@ function getReply(command) {
             return `It will be ${command.replace(/[^0-9]/g, '') * rate['DKK'].EUR} euros.`;
         }
         else {
-            return `Currency rate is not avilable.`;
+            return "Currency rate is not avilable.";
         }
     }
     else {
-        return `I don't understand.`;
+        return "I don't understand.";
     }
 }
 console.log(getReply("my name is Haile"))//Nice to meet you Haile.
