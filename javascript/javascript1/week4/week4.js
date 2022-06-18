@@ -1,39 +1,59 @@
-const userName = [];
+const userName = "";
 const todoList = [];
+
+function addTodo(command) {
+
+    if (command.includes("Add") && command.includes("to my todo")) {
+        let todo = command.substring(4, command.lastIndexOf("to my todo") - 1);
+        todoList.push(todo);
+        return `${todo} added to your todo`;
+
+    }
+    else {
+        "You need to use a proper command to add on your todos!"
+    }
+}
+
+function removeTodos(command) {
+    if (command.includes("Remove") && command.includes("from my todo")) {
+        let removeTodo = command.substring(7, command.lastIndexOf("from my todo") - 1);
+        todoList.splice(todoList.indexOf(removeTodo), 1);
+        return `Removed ${removeTodo} from your todo`;
+
+    }
+    else {
+        return "Please use proper command!"
+    }
+
+}
+
 
 function getReply(command) {
     if (command === " " || typeof command !== "string") {
-        return `Not a valid command.`;
+        return "Not a valid command.";
     }
     else if (command.includes("my name is") && userName.length === 0) {
-        userName.push({ "name": command.split(" ").pop() });
-        return `Nice to meet you ${command.split(" ").pop()}.`;
+        userName = command.split(" ").pop();
+        return `Nice to meet you ${userName}.`;
     }
-    else if (command.includes("my name is") && command.includes(`${userName[0].name}`)) {
-        return `You already introduce your name.`;
+    else if (command.includes("my name is") && command.includes(userName)) {
+        return "You have already introduced your name.";
     }
 
     else if (command === "what is my name?") {
-        if (userName[0].name === "" || typeof (userName[0].name) !== "string") {
-            return `You don't introduce yourself. What is your name?`;
+        if (userName === "" || typeof (userName) !== "string") {
+            return "You havn't introduced yourself. What is your name?";
 
         }
         else {
-            return `Your name is ${userName[0].name}.`;
+            return `Your name is ${userName}.`;
         }
     }
-    else if (command === "Add fishing to my todo") {
-        todoList.push("fishing");
-        return `Fishing added to your todo.`;
+    else if (command.includes("Add") && command.includes("to my todo")) {
+        return addTodo(command);
     }
-    else if (command === "Add singing in the shower to my todo") {
-        todoList.push("Singing in the shower");
-        return `Singing in the shower added to your todos.`;
-    }
-
-    else if (command === "Remove fishing from my todo") {
-        todoList.splice(todoList.indexOf('fishing'), 1);
-        return `Removed fishing from your todo.`
+    else if (command.includes("Remove") && command.includes("from my todo")) {
+        return removeTodos(command);
     }
     else if (command === "What is on my todo?") {
         return `You have ${todoList.length} todos- ${todoList.join(',')}.`;
@@ -85,7 +105,7 @@ function getReply(command) {
     }
 }
 console.log(getReply("my name is Haile"))//Nice to meet you Haile.
-console.log(getReply("my name is Haile"))// You already introduce your name.
+console.log(getReply("my name is Haile"))// You have already introduced your name.
 console.log(getReply("what is my name?"))//Your name is Haile.
 console.log(getReply(`Add fishing to my todo`))//Fishing added to your todo.
 console.log(getReply(`Add singing in the shower to my todo`))//Singing in the shower added to your todos.
