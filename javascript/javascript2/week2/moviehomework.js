@@ -1,3 +1,4 @@
+let numbers = [1, 2, 3, 4];
 let newNumbers = numbers.filter(element => element % 2 != 0)
     .map(element => element * 2);
 
@@ -56,11 +57,10 @@ console.log(dupicatedWordTitle)
 //8-Calculate the average rating of all the movies using reduce. 
 
 const averageRating = movies.map(element => element.rating).reduce((a, b) => a + b, 0) / movies.length;
-
+console.log(averageRating);
 //9-Count the total number of Good, Average and Bad movies using reduce.
 
 const tagCounter = movies.map(element => element.tag);
 const tagMovies = tagCounter.reduce(function (accumulator, currentValue) {
     return accumulator[currentValue] ? ++accumulator[currentValue] : accumulator[currentValue] = 1, accumulator
-});
-console.log(tagMovies)
+}, {})
