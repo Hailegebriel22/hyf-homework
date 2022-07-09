@@ -54,7 +54,7 @@ const result = () => {
 
 }
 
-const reset = () => { 
+const reset = () => {
     setTimeout(() => {
         window.location.reload();
     }, (document.getElementById("set-timer").value * 1000) + 5000)
