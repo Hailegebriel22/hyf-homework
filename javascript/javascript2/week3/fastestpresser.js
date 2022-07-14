@@ -1,7 +1,7 @@
 let timer = document.getElementById("set-timer");
 let setTimer = document.querySelector("#set-timer");
-let resultS=document.getElementById("result-s");
-let resultL=document.getElementById("result-l")
+let resultS = document.getElementById("result-s");
+let resultL = document.getElementById("result-l")
 
 let startBtn = document.querySelector("#start-btn")
 
@@ -18,16 +18,16 @@ function fastestPresser() {
 }
 
 
-let counterl = 1;
-let counters = 1;
+let counterl = 0;
+let counters = 0;
 function keyPressCounter() {
     document.addEventListener("keypress", e => {
 
         if (e.key === "l" && timer.value !== "") {
-            resultL.innerHTML = `${counterl++}`;
+            resultL.innerHTML = `${++counterl}`;
         }
         else if (e.key === "s" && timer.value !== "") {
-            resultS.innerHTML = `${counters++}`;
+            resultS.innerHTML = `${++counters}`;
         }
 
     })
@@ -52,7 +52,7 @@ const result = () => {
 
 
         }
-    },timer.value * 1000)
+    }, timer.value * 1000)
 
 }
 
