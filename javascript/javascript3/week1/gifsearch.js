@@ -6,11 +6,11 @@
 Add an input element, where the user can specify how many gif results the user wants. */
 
 
-const gifDiv = document.getElementById("gifwrapper");
-const ul = document.createElement('ul')
-const numberOfGifs = document.getElementById("numgifs")
+const ul = document.createElement('ul');
+const numberOfGifs = document.getElementById("numgifs");
 function searchGif() {
-    removeAllChildNodes(ul)
+    ul.innerText = "";
+    //removeAllChildNodes(ul)
     const term = document.getElementById("term");
     const validCheck = document.getElementById("validcheck");
     document.body.appendChild(validCheck)
@@ -47,20 +47,20 @@ function dislpayGif(data) {
             li.appendChild(img)
             ul.appendChild(li)
 
-            document.body.appendChild(ul)
 
         })
+        document.body.appendChild(ul)
 
     }
 }
-function removeAllChildNodes(parent) {
+/* function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
-}
+} */
 
-const mybtn = document.getElementById("mybtn")
-mybtn.addEventListener('click', () => {
+const gifSearchBtn = document.getElementById("gif-search-btn")
+gifSearchBtn.addEventListener('click', () => {
     searchGif()
 
 })

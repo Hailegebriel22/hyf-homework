@@ -42,13 +42,15 @@ When sunrise and sunset is      */
 
 
 
-const cityButton = document.getElementById("weather-btn")
+const cityButton = document.getElementById("weather-btn");
 const ul = document.createElement('ul');
 
 function weatherData() {
-    removeAllChildNodes(ul)
+    ul.innerText = "";
+
+    //removeAllChildNodes(ul)
     if (city.value === "") {
-        alert("Please write a city for weather information!")
+        alert("Please write a city for weather information!");
     }
     else {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=bad81b49a2bd6444de220852346826b0`)
@@ -67,31 +69,33 @@ function weatherDisplay(data) {
         "Icon for the weather type": `${data.weather[0].icon}`,
         "Wind speed": `${data.wind.speed}`, "Cloudiness": `${data.weather[0].description}`,
         "Sunrise": `${data.sys.sunrise}`, "Sunset": `${data.sys.sunset}`
-    }
+    };
 
     Object.entries(weatherInfoList).forEach(entry => {
         const [key, value] = entry;
         const li = document.createElement('li');
-        li.innerHTML = `${key}  ${value}`
-        ul.appendChild(li)
+        li.innerHTML = `${key}  ${value}`;
+        ul.appendChild(li);
 
     });
-    document.body.appendChild(ul)
+    document.body.appendChild(ul);
 
 }
 
 
-function removeAllChildNodes(parent) {
+/* function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
-}
+} */
 
 // Use my current position weather API
 
 const weatherByLocationbtn = document.getElementById("weatherByLocation-btn")
 function logLocation() {
-    removeAllChildNodes(ul)
+    ul.innerText = "";
+
+    //removeAllChildNodes(ul)
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getPosition);
@@ -106,7 +110,7 @@ function getPosition(position) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latLon[0]}&lon=${latLon[1]}&appid=bad81b49a2bd6444de220852346826b0`)
         .then(response => response.json())
         .then(data => {
-            weatherDisplay(data)
+            weatherDisplay(data);
         })
 
 }
