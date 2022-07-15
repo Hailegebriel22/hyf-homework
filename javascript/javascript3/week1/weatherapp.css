@@ -1,0 +1,37 @@
+body {
+    display:flex;
+    flex-direction: column;
+    background-image: url('https://img.freepik.com/free-photo/clouds-sky-horizontal-shot_23-2148824924.jpg?t=st=1657650636~exp=1657651236~hmac=fc2c688a91f19244ee2a732bf1030030f21263842ff2b0280d60569d5cb7705f&w=996');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:blanchedalmond;
+    gap: 1em;
+    color: black;
+}
+
+#city {
+    margin-top: 10em;
+    margin-left: 25%;
+    width: 17%;
+padding: 1em 1em;
+}
+
+#weather-btn {
+    margin-left: 25%;
+    width: 20%;
+    padding: 1em 4em;
+    background-color: skyblue;
+
+}
+#weatherByLocation-btn {
+    margin-left: 25%;
+    width: 20%;
+    padding: 1em 4em;
+    background-color: skyblue;
+
+}
+
+ul {
+    margin-left: 20%;
+}
