@@ -14,7 +14,7 @@ function badMoviesRating() {
 
         })
 }
-badMoviesRating()
+//badMoviesRating()
 
 
 function resolveTimer(resolveAfter) {
@@ -31,13 +31,14 @@ resolveTimer(5).then(() => {
 function setTimeoutPromises(miliseconds) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve();
+            resolve(console.log(`Called after ${miliseconds / 1000} seconds`));
         }, miliseconds);
     })
 }
-setTimeoutPromises(3000).then(() => {
-    console.log("Called after 3 seconds");
-});
+setTimeoutPromises(3000).then()
+//setTimeoutPromises(3000).then(() => {
+// console.log(`Called after ${miliseconds/1000} seconds`);
+//});
 
 
 function getCurrentLocation() {
@@ -71,25 +72,24 @@ function getData() {
         )
 }
 
-function thenFetching() {
-    //fetch('http://api.open-notify.org/astros.json')
-    return new Promise((resolve, reject) => {
-        const url = 'http://api.open-notify.org/astros.json';
-        if (url) {
-            setTimeout(() => {
-                resolve()
-                fetch(url)
-                    .then(res => console.log(res.json()))
 
-            }, 3000);
-        }
-        else {
-            reject("error")
-        }
-    });
+
+function timeoutPromise() {
+    return new Promise((thenFetching, reject) => {
+        setTimeout(() => {
+            const url = 'http://api.open-notify.org/astros.json';
+            thenFetching(fetch(url))
+        }, 3000);
+    })
 }
 
-thenFetching()
+
+
+timeoutPromise()
+    .then()
+    .then(res => {
+        console.log(res);
+    })
 
 async function awaitFetching() {
 
