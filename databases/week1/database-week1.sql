@@ -2,15 +2,11 @@
 
 SELECT COUNT(`title`) FROM `task`;
 
--- SELECT `title` FROM `task` ;
-
 -- 2 Find out how many tasks in the task table do not have a valid due date
 
 SELECT COUNT(`title`) FROM `task` WHERE `due_date` IS NULL;
 
 -- 3 Find all the tasks that are marked as done
-
--- SELECT * FROM `task` WHERE status_id=1 ;
 
 SELECT *
 FROM `task` AS tk
