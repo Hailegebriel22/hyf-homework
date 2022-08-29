@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fastestpresser.css">
+    <title>fastestpresser</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+      <div>
+        <h1 id="title"> Fastest Presser</h1>
+        <input type="number" min="0" id="set-timer" oninput="validity.valid||(value='');" placeholder="Set timer in seconds">
+        <p id="notetext"></p>
+        <button id="start-btn">Start game!</button>
+      </div>
+      <div id="press">
+        <p id="press-l">Press L</p>
+        <p id="result-l"></p>
+        <p id="press-s">Press S</p>
+        <p id="result-s"></p>
+      </div>
+    </main>
+
+    <script src="fastestpresser.js"></script>
+</body>
+</html>

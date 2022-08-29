@@ -1,0 +1,42 @@
+body{
+    display:flex;
+    flex-direction: column;
+    background-image: url("https://i.gifer.com/763k.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    gap: 1em;
+}
+
+
+h1 {
+    margin-left: 25%;
+    margin-top: 3em;
+}
+#validcheck{
+    margin-left: 25%;
+}
+#term {
+       margin-left: 25%;
+    width: 15%;
+padding: 1em 1em;
+}
+
+#gif-search-btn {
+    margin-left: 25%;
+    width: 18%;
+padding: 1em 1em;
+background-color: lightgreen;
+border-style: none;
+
+}
+#numgifs {
+    margin-left: 25%;
+    width: 15%;
+    padding: 1em 1em;
+    margin-top: 1em;
+
+}
+ul{
+    margin-left: 22%;
+}
