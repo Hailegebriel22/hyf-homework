@@ -40,14 +40,17 @@ SELECT * FROM `task`;
  WHERE `email` LIKE '%@spotify.com';
   
   -- 'Donald Duck' with status 'Not started'
-SELECT * FROM `task`
-INNER JOIN `user` ON  user.id = task.user_id
+SELECT task.id, task.title, user.name , status.name  FROM `task`
+INNER JOIN `user_task` ON  task.id = user_task.task_id
 INNER JOIN `status` ON  status.id = task.status_id
+INNER JOIN `user` ON user.id = user_task.user_id
 WHERE user.name='Donald Duck' AND status.name='Not started'  ;
 
 -- tasks for 'Maryrose Meadows' that were created in september (hint: month(created)=month_number)
-SELECT * FROM `task`
-INNER JOIN `user` ON  user.id = task.user_id
+SELECT  task.id, task.title, user.name , task.created 
+FROM task 
+INNER JOIN user_task ON  task.id = user_task.task_id 
+INNER  JOIN user ON user.id = user_task.user_id 
 WHERE user.name='Maryrose Meadows' AND MONTH(created) = 09;
 
 -- Find how many tasks where created in each month, e.g. how many tasks were created in october
