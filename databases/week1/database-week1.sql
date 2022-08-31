@@ -1,5 +1,5 @@
 -- 1 Find out how many tasks are in the task table
- 
+
 SELECT COUNT(`title`) FROM `task`;
 
 -- 2 Find out how many tasks in the task table do not have a valid due date
