@@ -12,13 +12,7 @@ SELECT *
 FROM `task` AS tk
     INNER JOIN `status` AS st ON st.id = tk.status_id
 WHERE st.name = 'Done';
--- 
-select* from user
-inner join user_task
-on user.id = user_task.user_id
-inner join task
-on task.id + user_task.task_id
-where task.status_id = (select id from status where status.name='Done');
+
 -- 4- Find all the tasks that are not marked as done
 
 SELECT *
