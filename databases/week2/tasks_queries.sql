@@ -36,8 +36,11 @@ SELECT * FROM `task`;
   -- Part 3: More queries
   -- email ends in @spotify.com
   
-  SELECT * FROM `user`
- WHERE `email` LIKE '%@spotify.com';
+  SELECT user.id,user.name,user.email, task.title
+FROM task
+JOIN user_task ON task.id = user_task.task_id
+JOIN user ON user.id = user_task.user_id
+WHERE user.email LIKE '%@spotify.com';
   
   -- 'Donald Duck' with status 'Not started'
 SELECT task.id, task.title, user.name , status.name  FROM `task`
