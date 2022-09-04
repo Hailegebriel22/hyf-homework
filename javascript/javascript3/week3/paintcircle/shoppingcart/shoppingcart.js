@@ -9,7 +9,6 @@ class respiratory {
         const promise1 = fetch(`https://api.github.com/search/repositories?q=user:${this.username1}`)
         const promise2 = fetch(`https://api.github.com/search/repositories?q=user:${this.username2}`)
         const promise3 = fetch(`https://api.github.com/search/repositories?q=user:${this.username3}`)
-        const allPromises = [promise1, promise2, promise3]
         Promise.all([promise1, promise2, promise3])
             .then(response => Promise.all([response[0].json(), response[1].json(), response[2].json()]))
             .then(dat => dat.forEach(data => {
