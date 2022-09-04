@@ -8,7 +8,6 @@ SELECT * FROM `meal`;
 
 INSERT INTO
     meal (
-        id,
         title,
         description,
         location,
@@ -18,7 +17,6 @@ INSERT INTO
         created
     )
 values (
-        1,
         'Buffet',
         'ten different types of meals',
         'Copenhagen',
@@ -30,7 +28,6 @@ values (
 
 INSERT INTO
     meal (
-        id,
         title,
         description,
         location,
@@ -40,7 +37,6 @@ INSERT INTO
         created
     )
 values (
-        2,
         'Beef steak',
         'with thai sauce',
         'Copenhagen',
@@ -52,7 +48,6 @@ values (
 
 INSERT INTO
     meal (
-        id,
         title,
         description,
         location,
@@ -62,7 +57,6 @@ INSERT INTO
         created
     )
 values (
-        3,
         'Beef burger',
         'with soda',
         'Aarhus',
@@ -74,7 +68,6 @@ values (
 
 INSERT INTO
     meal (
-        id,
         title,
         description,
         location,
@@ -84,7 +77,6 @@ INSERT INTO
         created
     )
 values (
-        4,
         'Salmon',
         'Smoked salmon',
         'Odense',
@@ -96,7 +88,6 @@ values (
 
 INSERT INTO
     meal (
-        id,
         title,
         description,
         location,
@@ -106,7 +97,6 @@ INSERT INTO
         created
     )
 values (
-        5,
         'Pizza',
         'Pepperoni pizza',
         'Odense',
@@ -154,7 +144,6 @@ values (
 
 INSERT INTO
     Reservation (
-        id,
         number_of_guests,
         meal_id,
         created_date,
