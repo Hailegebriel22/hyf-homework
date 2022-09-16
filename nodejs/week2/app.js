@@ -8,7 +8,7 @@ const knex = require('./documents');
 app.use(express.json())
 // GET /search
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { 
   res.send('This is a search engine')
 })
 
@@ -45,7 +45,7 @@ app.post('/search', async (req, res) => {
   //const searchData = knex.filter(element => (Object.keys(element) == String(Object.keys(fields))))
 
 
-  if (req.query.params = 'q' && fields.length !== 0) {
+  if (req.query.params == 'q' && fields.length !== 0) {
     res.status(404).json({ error: "Bad Request: query paramer 'q' and request body 'fields' can not be provided at the same time!" })
   } else if (fields.length == 0 || searchData.length == 0) {
     res.status(404).json({ error: "Not found" })
