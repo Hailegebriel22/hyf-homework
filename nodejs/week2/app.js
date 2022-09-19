@@ -42,7 +42,7 @@ app.post('/search', async (req, res) => {
   const fields = req.body.fields;
   const searchData = await knex.filter(element => Object.keys(element).find(key => String(key).includes(Object.keys(fields))))
 
-  if (req.query.params == 'q' && fields.length !== 0) {
+  if (req.query.params == 'q' && fields.length !== 0 && req.query.params !== undefined) {
     res.status(404).json({ error: "Bad Request: query paramer 'q' and request body 'fields' can not be provided at the same time!" })
   } else if (fields.length == 0 || searchData.length == 0) {
     res.status(404).json({ error: "Not found" })
