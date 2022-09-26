@@ -1,3 +1,4 @@
+const { query } = require('express');
 const express = require('express')
 const router = express.Router();
 const app = express();
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 app.get('/search', async (req, res) => {
   const searchData = await knex.filter(element => Object.values(element).find(word => String(word).includes(req.query.q)));
 
-  if (req.query.params == 'q' && searchData.length > 0) {
+  if (('q' in req.query) && searchData.length > 0) {
     res.json(searchData);
   } else {
     res.json(knex)
@@ -39,16 +40,34 @@ app.get('/documents/:id', async (req, res) => {
 // post /search
 
 app.post('/search', async (req, res) => {
-  const fields = req.body.fields;
-  const searchData = await knex.filter(element => Object.keys(element).find(key => String(key).includes(Object.keys(fields))))
+  const fields = req.body.fields
 
-  if (req.query.params == 'q' && fields.length !== 0 && req.query.params !== undefined) {
-    res.status(404).json({ error: "Bad Request: query paramer 'q' and request body 'fields' can not be provided at the same time!" })
-  } else if (fields.length == 0 || searchData.length == 0) {
-    res.status(404).json({ error: "Not found" })
-  } else {
+  if (('q' in req.query) && ([fields].length > 0 && fields !== undefined)) {
 
-    res.json(searchData)
+    res.status(404).json({ error: "Bad Request: query paramer 'q' and request body 'fields' can not be provided at the same time!" });
+  }
+  else if ([fields].length > 0 && fields !== undefined) {
+    let bodySearch = await knex.filter(element => Object.values(element).find(word => String(word).includes(Object.keys([fields]))))
+    if (bodySearch.length > 0) {
+
+      res.json(bodySearch);
+    } else {
+      res.status(404).json({ error: "Data Not found body search" });
+    }
+
+  }
+  else if ('q' in req.query) {
+    let querySearch = await knex.filter(element => Object.values(element).find(word => String(word).includes(req.query.q)));
+    if (querySearch.length > 0) {
+      res.json(querySearch)
+    } else {
+      res.status(404).json({ error: "Data Not found query param search" })
+    }
+
+  }
+
+  else {
+    res.status(404)
   }
 
 });
