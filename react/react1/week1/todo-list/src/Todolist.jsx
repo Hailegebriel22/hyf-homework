@@ -21,12 +21,12 @@ export default function Todolist(){
     return(
         <div className="ul"> 
 <ul>  
-        {todolist.map(todo=><TodoListItem todo={todo} key={todo.id} />)}
+        {todolist.map(todo=><TodoListTask todo={todo} key={todo.id} />)}
 </ul>
 </div>
     )
 }
- function TodoListItem({todo}){
+ function TodoListTask({todo}){
     return <li> {todo.description},{todo.deadline}</li>
 } 
 
