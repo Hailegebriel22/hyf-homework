@@ -1,12 +1,11 @@
-import Todolist from "./Todolist"
+import React from 'react';
+import TodoList from "./TodoList"
 import Title from "./Title"
-export default function Main(){
+export default function Main() {
     return  ( 
     <div className="main">
-       
-        <Title  />
-        <Todolist />
-    
+        <Title />
+        <TodoList />
     </div>
     )
 }

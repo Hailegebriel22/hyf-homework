@@ -1,4 +1,5 @@
-const todolist =[ 
+import React from 'react';
+const todoList =[ 
     {
         id:1,
         description:"Pay bills ",
@@ -17,11 +18,13 @@ const todolist =[
 ]
 
 
-export default function Todolist(){
+export default function TodoList(){
     return(
         <div className="ul"> 
 <ul>  
-        {todolist.map(todo=><TodoListTask todo={todo} key={todo.id} />)}
+        {todoList.map(todo=>
+        <TodoListTask todo={todo} key={todo.id} />
+        )}
 </ul>
 </div>
     )
