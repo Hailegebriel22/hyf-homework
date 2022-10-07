@@ -13,9 +13,13 @@ export default function Timer () {
     return () => clearInterval(interval);
   }, []);
     return (
-        <h2>
+    <> 
+      <h1>
+        Todolist
+      </h1>
+      <h2>
             You have used {seconds} seconds on this website. 
-        </h2>
-
+      </h2>
+    </>
     )
 }
