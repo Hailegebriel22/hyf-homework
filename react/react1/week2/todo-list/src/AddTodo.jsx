@@ -9,21 +9,21 @@ export default function AddTodo () {
 
   const addTaskClick= ()=> {
     const arryLen = list.length;
-    const newTodo = `Todo number ${arryLen + 1} has been Added`;
-    const newTodoList = list.concat([{ id: '' + (arryLen + 1) , description: `${newTodo}`}]);
+    const newTodo = `Random Todo has been Added`;
+    //const newTodoList = list.concat([{ id: '' + (arryLen + 1) , description: `${newTodo}`}]);
+    setList([...list, {id:'' + (arryLen + 1) , description: `${newTodo}`}])
   
-   setList(newTodoList)
+  // setList(newTodoList)
   }
 
 function deleteTaskClick(id) {
   const newList = list.filter((item) => item.id !== id);
-
   setList(newList);
 }
 
 return ( 
   <>
-  <button onClick={addTaskClick}>Add Todo</button>
+  <button className='addTodo'  onClick={addTaskClick}>Add Todo</button>
   <TodoList list={list} onDelete={deleteTaskClick} />
 </>
 )

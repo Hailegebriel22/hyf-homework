@@ -1,14 +1,14 @@
 import React from 'react';
 import AddTodo from './AddTodo'
-import './index.css';
+import './App.css';
 import Timer from './Timer';
 
 function App() {
   return (
-    <>
+    <div className='mainWrapper'>
       <Timer />
       <AddTodo />
-    </>
+    </div>
   );
 }
 

@@ -11,15 +11,13 @@ export default function TodoList  ({ list, onDelete }) {
 } 
     
       function Task ({ task, onDelete })  { 
-        //const [checked,setChecked]=useState(false)
-        //style={{textDecoration: 'line-through'}}
+        const [checked,setChecked]=useState(false)
           
         return( 
         <li> 
-          <input type='checkbox' checked={task.done} />
-         <span>{task.description}</span>     
-         <button type="button" onClick={() => onDelete(task.id)}>
-            Delete
+          <input onChange={()=>setChecked(!checked)} type="checkbox" checked={checked} />
+         <span style={{textDecoration: checked ? "line-through" : ""}}>{task.description} </span>     
+         <button className="deleteButton" type="button" onClick={() => onDelete(task.id)}> Delete
           </button>
         </li>      
       )
