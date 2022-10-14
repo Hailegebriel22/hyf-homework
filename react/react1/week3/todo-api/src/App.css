@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+  text-align: center;
+  background-color: bisque;
+}
+
+input {
+padding: 5px 15px;
+margin-bottom: 15px;
+}
+span {
+      border: solid;
+      width: 70px;
+      padding: 5px 15px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+  
+}
+button{
+  padding: 5px 15px;
+  background-color: rgb(89, 232, 201);
+}
+.childrenWrap {
+  border :solid;
+  padding: 10px 10px;
+  width: 45%;
+  margin-top: 10px;
+  margin-left: 20%;  
+}
+.deleteButton:hover{
+  background-color: brown;
+}
+.editButton:hover{
+background-color:yellowgreen ;
+}
+.editButton{
+  margin-left: 5px;
+}
