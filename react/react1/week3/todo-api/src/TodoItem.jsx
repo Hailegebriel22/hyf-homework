@@ -24,7 +24,7 @@ export default   function TodoItem({ task, onDelete, onUpdateTodo})  {
       ):(<input type="text" onChange={(e) => {setDescription(e.target.value)}} value = {description} /> )
     }
      <button className="deleteButton"  onClick={() => onDelete(task.id)}> Delete
-      </button>
+     </button>
       <button   className="editButton"  onClick={() => editTodo(task.id)}>{!isEditing? 'Edit' : 'Update'}</button>
       </div>
       

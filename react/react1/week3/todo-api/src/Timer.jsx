@@ -5,7 +5,7 @@ export default function Timer () {
     useEffect(()=>{
         const interval = setInterval (()=>{setSecond(second=>second+1)},1000)
         return ()=> clearInterval(interval)
-    })
+    }) 
     
     return ( 
         <> 
