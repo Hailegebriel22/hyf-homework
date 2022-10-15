@@ -1,9 +1,9 @@
 import React,{ useState}  from 'react';
 
-export default function TodoList  ({ list, onDelete }) {
+export default function TodoList  ({ item, onDelete }) {
     return(
         <ul>
-        {list.map((task) => (
+        {item.map((task) => (
           <Task key={task.id} task={task} onDelete={onDelete} />
         ))}
       </ul>
