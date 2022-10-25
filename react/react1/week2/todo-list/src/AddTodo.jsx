@@ -7,7 +7,7 @@ import todoList  from './data';
 export default function AddTodo () { 
   const  [list,setList] = useState(todoList);
 
-  const addTaskClick= ()=> {
+  const addTodoClick= ()=> {
     //const arryLen = list.length;
     const newTodo = `Random Todo has been Added`;
     //const newTodoList = list.concat([{ id: '' + (arryLen + 1) , description: `${newTodo}`}]);
@@ -16,15 +16,15 @@ export default function AddTodo () {
   // setList(newTodoList)
   }
 
-function deleteTaskClick(id) {
+function deleteTodoClick(id) {
   const newList = list.filter((item) => item.id !== id);
   setList(newList);
 }
 
 return ( 
   <>
-  <button className='addTodo'  onClick={addTaskClick}>Add Todo</button>
-  <TodoList list={list} onDelete={deleteTaskClick} />
+  <button className='addTodo'  onClick={addTodoClick}>Add Todo</button>
+  <TodoList list={list} onDelete={deleteTodoClick} />
 </>
 )
 };
