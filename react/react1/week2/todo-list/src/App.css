@@ -1,0 +1,17 @@
+body {
+  margin: 5em;
+  text-align: left;
+  background-color: beige; 
+  border: 1px solid;
+  border-color:blueviolet;
+}
+.mainWrapper {
+  padding: 2em 2em;
+}
+.addTodo {
+  margin: 2em 2em 2em 2em; 
+}
+li {
+  margin-right: 10em ;
+}
+

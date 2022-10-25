@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  
+}
+.label:checked  {
+  color:red;
+  text-decoration: line-through;
+}
