@@ -1,5 +1,7 @@
 Broccoli
 Carrots
-Squash
+Lettuce
 Onion
 Tomato
+Spinach
+cabbage
